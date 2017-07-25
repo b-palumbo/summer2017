@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Week 2 Files</title>
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	];
+	for (let i in people){
+            let tempDiv = document.createElement('div');
+            
+            let tempP = document.createElement('p');
+            let tempP2 = document.createElement('p');
+            let tempP3 = document.createElement('p');
+
+            let textNode = document.createTextNode(people[i].first);
+            let textNode2 = document.createTextNode(people[i].last);
+            let textNode3 = document.createTextNode(people[i].credit);
+                        
+            tempP.appendChild(textNode);
+            tempP2.appendChild(textNode2);
+            tempP3.appendChild(textNode3);
+            
+            tempDiv.appendChild(tempP);
+            tempDiv.appendChild(tempP2);
+            tempDiv.appendChild(tempP3);
+            
+            document.body.appendChild(tempDiv);
+            
+            tempDiv.classList.add('border');
+            
+          tempDiv.setAttribute("id",String(i));
+            
+            
+            
+            //console.log(people[i].first);
+            //console.log(people[i].last);
+            //console.log(people[i].credit);
+            
+        }
+     
+        
+</script>
+
+
+
+</body>
+
+
+
+</html>
